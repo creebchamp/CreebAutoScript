@@ -18,7 +18,7 @@ read BACKEND_URL
 echo "Verifying license and downloading secure files..."
 
 # Fetch the real setup script securely
-curl -f -sS -o /tmp/real_setup.sh "$BACKEND_URL/api/download/file/install/setup.sh?key=$LICENSE_KEY"
+curl -H "ngrok-skip-browser-warning: true" -f -sS -o /tmp/real_setup.sh "$BACKEND_URL/api/download/file/install/setup.sh?key=$LICENSE_KEY"
 
 if [ $? -ne 0 ]; then
   echo "Error: Invalid License Key or failed to reach the backend."
