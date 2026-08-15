@@ -12,8 +12,8 @@ apt update && apt install -y curl wget jq
 echo -n "Enter your License Key: "
 read LICENSE_KEY
 
-echo -n "Enter your SaaS Backend URL (e.g. your ngrok url or IP:3000): "
-read BACKEND_URL
+
+BACKEND_URL="https://creebnet.com"
 
 echo "Verifying license and downloading secure files..."
 
